@@ -11,6 +11,10 @@ import org.apache.shardingsphere.sharding.spi.KeyGenerateAlgorithm;
 
 /**
  *
+ * Long worker id snowflake key generate algorithm.
+ * First 42 bits are same as Snowflake.
+ * 15 bits worker id.
+ * 7 bits auto increment offset in one millisecond.
  *
  */
 
@@ -23,9 +27,9 @@ public final class LongWorkerIdSnowflakeKeyGenerateAlgorithm implements KeyGener
 
     private static final String MAX_TOLERATE_TIME_DIFFERENCE_MILLISECONDS_KEY = "max-tolerate-time-difference-milliseconds";
 
-    private static final long SEQUENCE_BITS = 12L;
+    private static final long SEQUENCE_BITS = 7L;
 
-    private static final long WORKER_ID_BITS = 10L;
+    private static final long WORKER_ID_BITS = 15L;
 
     private static final long SEQUENCE_MASK = (1 << SEQUENCE_BITS) - 1;
 
