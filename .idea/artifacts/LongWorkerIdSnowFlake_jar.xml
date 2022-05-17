@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LongWorkerIdSnowFlake:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LongWorkerIdSnowFlake_jar</output-path>
+    <root id="archive" name="LongWorkerIdSnowFlake.jar">
+      <element id="module-output" name="LongWorkerIdSnowFlake" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/lombok.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/shardingsphere-spi-5.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/guava-30.0-jre.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/shardingsphere-sharding-api-5.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/shardingsphere-sharding-core-5.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/shardingsphere-infra-common-5.1.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

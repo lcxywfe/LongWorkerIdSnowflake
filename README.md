@@ -1,0 +1,2 @@
+# LongWorkerIdSnowflake
+LongWorkerIdSnowflakeKeyGenerateAlgorithm for ShardingSphere
