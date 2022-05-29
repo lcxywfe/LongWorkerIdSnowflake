@@ -49,8 +49,7 @@ public final class LongWorkerIdSnowflakeKeyGenerateAlgorithm implements KeyGener
     private static TimeService timeService = new TimeService();
 
     @Getter
-    @Setter
-    private Properties props = new Properties();
+    private Properties props;
 
     private long workerId;
 
@@ -75,7 +74,8 @@ public final class LongWorkerIdSnowflakeKeyGenerateAlgorithm implements KeyGener
     }
 
     @Override
-    public void init() {
+    public void init(final Properties props) {
+        this.props = props;
         workerId = getWorkerId();
         maxVibrationOffset = getMaxVibrationOffset();
         maxTolerateTimeDifferenceMilliseconds = getMaxTolerateTimeDifferenceMilliseconds();
@@ -98,7 +98,7 @@ public final class LongWorkerIdSnowflakeKeyGenerateAlgorithm implements KeyGener
     }
 
     @Override
-    public synchronized Comparable<?> generateKey() {
+    public synchronized Long generateKey() {
         long currentMilliseconds = timeService.getCurrentMillis();
         if (waitTolerateTimeDifferenceIfNeed(currentMilliseconds)) {
             currentMilliseconds = timeService.getCurrentMillis();
