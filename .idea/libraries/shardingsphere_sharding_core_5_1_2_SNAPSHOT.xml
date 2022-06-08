@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="shardingsphere-sharding-core-5.1.2-SNAPSHOT">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/shardingsphere-sharding-core-5.1.2-SNAPSHOT.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
